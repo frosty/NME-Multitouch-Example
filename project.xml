@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+    <!-- Forked from com.jamesfrost.MultiTouchExample by James Frost 
+         https://github.com/frosty/NME-Multitouch-Example -->
+	<meta title="MultiTouch" package="com.sample.project" version="1.0.0" company="Company Name" />
+	<app main="Main" path="Export" file="MultiTouch" />
+	
+	<window background="#ffffff" fps="60" />
+	<window width="800" height="600" unless="mobile" />
+	<window orientation="landscape" vsync="true" antialiasing="0" if="cpp" />
+
+	<source path="src" />
+	
+	<haxelib name="openfl" />
+	
+    <icon path="assets/openfl.svg" />
+	<assets path="assets" exclude="openfl.svg" />
+
+	
+</project>

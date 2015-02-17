@@ -1,12 +1,12 @@
 package ;
 
-import nme.Lib;
-import nme.display.FPS;
-import nme.display.Sprite;
-import nme.events.Event;
-import nme.events.TouchEvent;
-import nme.ui.Multitouch;
-import nme.ui.MultitouchInputMode;
+import openfl.Lib;
+import openfl.display.FPS;
+import openfl.display.Sprite;
+import openfl.events.Event;
+import openfl.events.TouchEvent;
+import openfl.ui.Multitouch;
+import openfl.ui.MultitouchInputMode;
 
 /**
  * Simple multitouch example - tested with iOS
@@ -18,7 +18,7 @@ class Main extends Sprite
 	// Keep track of whether multitouch is supported on this device
 	private var multiTouchSupported : Bool;
 	// Store our 
-	private var touches : IntHash<Sprite>;
+	private var touches : Map<Int,Sprite>;
 	
 	public function new() 
 	{
@@ -37,7 +37,7 @@ class Main extends Sprite
         addChild(fps);
         
         // Declare our touches hash
-		touches = new IntHash<Sprite>();
+		touches = new Map<Int,Sprite>();
 		
 		// Find out whether multitouch is supported
 		multiTouchSupported = Multitouch.supportsTouchEvents;
@@ -104,8 +104,8 @@ class Main extends Sprite
 	static public function main() 
 	{
 		var stage = Lib.current.stage;
-		stage.scaleMode = nme.display.StageScaleMode.NO_SCALE;
-		stage.align = nme.display.StageAlign.TOP_LEFT;
+		stage.scaleMode = openfl.display.StageScaleMode.NO_SCALE;
+		stage.align = openfl.display.StageAlign.TOP_LEFT;
 		
 		Lib.current.addChild(new Main());
 	}
